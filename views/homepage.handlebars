@@ -1,0 +1,41 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half">
+        <div class="dropdown is-primary">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span> Event by Category</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="/" class="dropdown-item is-primary">
+                All Events
+              </a>
+              <a href="/career" class="dropdown-item is-primary">
+                Career
+              </a>
+              <a href="/knowledge" class="dropdown-item is-primary">
+                Build knowledge
+              </a>
+              <a href="/share-interest" class="dropdown-item is-primary">
+                Share Interests
+              </a>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div>
+{{#each events as |event| }}
+{{> event-details}}
+{{/each}}
+</div>
+<script src="/js/homepage.js"></script>
+  
